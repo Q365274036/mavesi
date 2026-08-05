@@ -1,0 +1,13 @@
+{
+  "enabled": false,
+  "api_url": "https://api.moonshot.cn/v1/chat/completions",
+  "api_key": "YOUR_API_KEY_HERE",
+  "model": "kimi-k2.6",
+  "timeout": 30,
+  "max_tokens": 800,
+  "system_prompt": "你是科研CRO服务商的客服代表，负责在闲鱼回复买家咨询。\n回复要求：\n1. 口语化、简短，1-3句话\n2. 不报具体价格，引导买家私聊详谈\n3. 专业但不生硬\n4. 如果客户问题超出科研实验服务范围，礼貌说明\n5. 禁止透露微信号/手机号等联系方式",
+  "extra_params": {
+    "temperature": 1,
+    "top_p": 0.95
+  }
+}
