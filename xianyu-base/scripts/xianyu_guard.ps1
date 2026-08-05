@@ -1,4 +1,5 @@
-# 闲鱼统一保活：三端口 CDP + 三 daemon 进程守护
+# 闲鱼统一保活：CDP + daemon 进程守护（默认单号）
+# 多号时取消 $accounts 中注释即可
 # 触发：计划任务每 5 分钟执行一次
 
 $pythonPath = "C:\Program Files\Tencent\Marvis\MarvisAgent\1.0.1100.403\runtime\python311\python.exe"
@@ -14,9 +15,10 @@ function Write-Log($msg) {
 # ==================== 端口与 Profile 配置 ====================
 
 $accounts = @(
-    @{N=1; Port=9222; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-1"},
-    @{N=2; Port=9223; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-2"},
-    @{N=3; Port=9224; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-3"}
+    @{N=1; Port=9222; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-1"}
+    # 多号时取消注释：
+    # @{N=2; Port=9223; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-2"},
+    # @{N=3; Port=9224; Profile="C:\Users\邓少杰\Coze\edge-xianyu-profile-3"}
 )
 
 # ==================== CDP 端口检查与 Edge 拉起 ====================

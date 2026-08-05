@@ -1,6 +1,7 @@
 """
 闲鱼 CDP 守护进程
-每 5 分钟检测三个号 CDP 端口是否在线，不在线则自动拉起 Edge + 注入反检测
+每 5 分钟检测 CDP 端口是否在线，不在线则自动拉起 Edge + 注入反检测
+端口配置见 PORTS 字典，默认单号 9222，多号时添加即可
 """
 import subprocess
 import time
@@ -21,8 +22,9 @@ logger = logging.getLogger("xianyu-daemon")
 
 PORTS = {
     1: 9222,
-    2: 9223,
-    3: 9224,
+    # 多号时取消注释：
+    # 2: 9223,
+    # 3: 9224,
 }
 
 PROFILE_DIR = r"C:\Users\邓少杰\Coze\edge-xianyu-profile-{n}"
